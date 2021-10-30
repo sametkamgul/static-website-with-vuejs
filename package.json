@@ -1,0 +1,25 @@
+{
+  "name": "static-website-with-vuejs",
+  "version": "1.0.0",
+  "description": "A static website example with Vue.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sametkamgul/static-website-with-vuejs.git"
+  },
+  "keywords": [
+    "vue.js",
+    "node.js"
+  ],
+  "author": "Samet Kamğul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sametkamgul/static-website-with-vuejs/issues"
+  },
+  "homepage": "https://github.com/sametkamgul/static-website-with-vuejs#readme"
+}

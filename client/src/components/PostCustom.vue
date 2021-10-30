@@ -6,9 +6,14 @@
         <p class="article">
             {{ text }}
         </p>
-        <ul class="keywords">tags:<li class="keyword-li" v-for="keyword in keywords">#{{ keyword }}</li></ul>
-        <!-- <button class="expand-button">expand</button> -->
+        <ul class="keywords">
+            tags:
+            <li class="keyword-li" v-for="keyword in keywords">
+                #{{ keyword }}
+            </li>
+        </ul>
     </div>
+    <button class="expand-button">expand</button>
 </template>
 
 <script>
@@ -21,16 +26,21 @@ export default {
         text: String,
         keywords: Array,
     },
+    created() {
+        console.log('button created');
+        // TODO: add button listener to expand article here!!!
+    }
 };
 </script>
 <style scoped>
 .container {
     display: block;
-    /* border: 2px solid black; */
+    border: 4px solid wheat;
     border-radius: 10px;
     margin: auto;
-    background-color: wheat;
+    background-color: #00589f;
     padding: 20px;
+    max-width: 75%;
 }
 .container:hover {
     box-shadow: 0px 0px 20px palegreen;
@@ -62,11 +72,15 @@ export default {
 .keywords {
     margin: auto;
     display: block;
+    color: wheat;
 }
 .keyword-li {
     font-size: 16px;
     display: inline;
     margin: auto;
-    padding: 5px
+    padding: 5px;
+}
+p {
+    color: wheat;
 }
 </style>

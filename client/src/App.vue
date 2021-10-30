@@ -43,9 +43,12 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    max-width: 100%;
+    overflow-y: hidden;
 }
 body {
-    background-color: tomato;
+    background-color: #242424;
+    /* width: 100%; */
 }
 .articles {
     padding-left: 30px;
