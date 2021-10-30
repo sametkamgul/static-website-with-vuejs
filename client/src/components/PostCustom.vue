@@ -1,7 +1,9 @@
 <template>
     <div class="container">
-        <p class="date">{{ date }}</p>
-        <p class="category">#{{ category }}</p>
+        <div class="top-inner-container">
+            <p class="date">{{ date }}</p>
+            <p class="category">#{{ category }}</p>
+        </div>
         <p class="title">{{ title }}</p>
         <p class="article">
             {{ text }}
@@ -12,8 +14,10 @@
                 #{{ keyword }}
             </li>
         </ul>
+        <button class="expand-button" ref="expand-button" v-on:click="expandArticle">
+            read more...
+        </button>
     </div>
-    <button class="expand-button">expand</button>
 </template>
 
 <script>
@@ -27,9 +31,21 @@ export default {
         keywords: Array,
     },
     created() {
-        console.log('button created');
-        // TODO: add button listener to expand article here!!!
-    }
+        
+    },
+    methods: {
+        expandArticle() {
+            var expandButtonElement = this.$el.querySelector(".expand-button");
+            var articleElement = this.$el.querySelector('.article');
+            if (expandButtonElement.textContent.includes("read more...")) {
+                expandButtonElement.textContent = "collapse";
+                articleElement.style.height = "100%";
+            } else {
+                articleElement.style.height = "100px";
+                expandButtonElement.textContent = "read more...";
+            }
+        },
+    },
 };
 </script>
 <style scoped>
@@ -45,33 +61,46 @@ export default {
 .container:hover {
     box-shadow: 0px 0px 20px palegreen;
 }
+.top-inner-container {
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
 .category {
     font-size: 18px;
     margin: auto;
     float: left;
     padding: 10px;
-    display: block;
+    /* display: block; */
+    font-style: italic;
 }
 .title {
-    font-size: 40px;
+    font-size: 30px;
     margin: auto;
     padding: 5px;
+    padding-top: 10px;
+    display: inline-flex;
 }
 .date {
     font-size: 18px;
     margin: auto;
     float: right;
     padding: 10px;
-    display: block;
+    /* display: block; */
+    font-style: italic;
 }
 .article {
     font-size: 16px;
     margin: auto;
     padding: 5px;
+    height: 100px;
+    overflow: hidden;
 }
 .keywords {
-    margin: auto;
     display: block;
+    margin: auto;
+    padding: 0px;
     color: wheat;
 }
 .keyword-li {
@@ -79,6 +108,16 @@ export default {
     display: inline;
     margin: auto;
     padding: 5px;
+}
+.expand-button {
+    font-size: 16px;
+    font-weight: bolder;
+    font-style: italic;
+    border: none;
+    background: none;
+    padding-top: 10px;
+    margin: auto;
+    color: wheat;
 }
 p {
     color: wheat;
