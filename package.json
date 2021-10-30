@@ -29,7 +29,8 @@
     "dependencies": {
         "express": "^4.17.1",
         "express-static": "^1.2.6",
-        "vue": "^3.0.0"
+        "vue": "^3.0.0",
+        "vue-router": "^4.0.12"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "~4.5.0",

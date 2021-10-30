@@ -39,3 +39,8 @@ npm run serve
 npm run build
 ```
 
+## Credits
+images can be found on
+
+
+[Photo by Guillaume Meurice from Pexels](pexels.com/photo/photography-of-fall-trees-1591447/)
