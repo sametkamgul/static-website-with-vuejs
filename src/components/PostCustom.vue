@@ -51,15 +51,16 @@ export default {
 <style scoped>
 .container {
     display: block;
-    border: 4px solid wheat;
+    border: 0px solid;
     border-radius: 10px;
     margin: auto;
-    background-color: #00589f;
+    background-color: #162b4a;
     padding: 20px;
     max-width: 75%;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
 }
 .container:hover {
-    box-shadow: 0px 0px 20px palegreen;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
 }
 .top-inner-container {
     display: block;
@@ -80,7 +81,7 @@ export default {
     margin: auto;
     padding: 5px;
     padding-top: 10px;
-    display: inline-flex;
+    /* display: inline-flex; */
 }
 .date {
     font-size: 18px;
@@ -120,6 +121,6 @@ export default {
     color: wheat;
 }
 p {
-    color: wheat;
+    color: #ffffff;
 }
 </style>

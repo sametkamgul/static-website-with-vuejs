@@ -87,6 +87,7 @@ export default {
 }
 a {
     text-decoration: none;
-    color: wheat;
+    color: #ffffff;
+;
 }
 </style>
